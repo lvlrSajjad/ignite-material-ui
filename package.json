@@ -1,0 +1,39 @@
+{
+  "name": "ignite-material-ui",
+  "description": "Ignite plugin that adds some material ui collection for use in project.",
+  "version": "0.0.2",
+  "license": "MIT",
+  "files": [
+    "commands",
+    "templates",
+    "ignite.json",
+    "plugin.js",
+    "README.md"
+  ],
+  "author": {
+    "name": "Sajjad Asadi",
+    "email": "lvlr.xaus@gmail.com",
+    "url": "https://github.com/lvlrSajjad/ignite-material-ui"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "ava",
+    "watch": "ava --watch",
+    "coverage": "nyc ava",
+    "shipit": "np"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "url": "https://github.com/lvlrSajjad/ignite-material-ui",
+  "repository": "lvlrSajjad/ignite-material-ui",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-eslint": "^7.1.1",
+    "np": "^2.12.0",
+    "nyc": "^10.1.2",
+    "ramda": "^0.23.0",
+    "sinon": "^1.17.7",
+    "standard": "^9.0.0"
+  }
+}
