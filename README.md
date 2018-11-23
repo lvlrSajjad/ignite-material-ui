@@ -17,6 +17,8 @@ Here you can see a Created by me and some hand picked collection of material com
       * [Material Colors](#material-colors)    
       * [Material Vertical Linear](#material-vertical-linear)
       * [Material Horizontal Linear](#material-horizontal-linear)
+      * [Material Card](#material-card)
+      * [Material Toolbar](#material-toolbar)
       * [Material Container](#material-container)
       * [Material Collapsible Toolbar Container](#material-collapsible-toolbar-container)
       * [Material Backdrop](#material-backdrop)  
@@ -25,6 +27,8 @@ Here you can see a Created by me and some hand picked collection of material com
       * [Material Buttons](#material-buttons) 
       * [Material FAB](#material-fab)
       * [Material Checkbox](#material-checkbox)   
+      * [Material Switch](#material-switch)
+      * [Material Radio Group](#material-radio-group)
 <!--te-->
 
 <h2 align="center">Installation</h2>
@@ -91,7 +95,169 @@ this component is a view with default column direction it can be used for better
        </MaterialVerticalLinear>
    ```    
    
-  ### Material Container 
+ ### Material Card 
+ 
+ <p align="center">
+ <img src="https://raw.githubusercontent.com/lvlrSajjad/ignite-boilerplate-andross-typescript/master/gifs/card.gif" width="30%">
+ </p>
+  
+  A card component created using material.io guidelines , Also CardContent Component is inside this is actually a view with 16dp padding
+  
+ #### Usage :
+ 
+ Above gif's code (just important things)
+ 
+ ```typescript jsx
+    //import
+    import {MaterialCard, MaterialCardContent} from 'react-native-typescript-material-ui-collection';
+ ```    
+ 
+```typescript jsx
+   //with image header
+   <MaterialCard style={{flex:1}}  header={()=><Image style={{height:150}} source={{uri:'https://lorempixel.com/200/300/fashion'}}/>}>
+     <MaterialCardContent >
+     <Text> material card</Text>
+     <Text> material card</Text>
+     </MaterialCardContent>
+   </MaterialCard>
+```    
+```typescript jsx
+   //setting elevation
+   <MaterialCard  style={{flex:1}} elevation={3}>
+      <MaterialCardContent >
+        <Text> material card</Text>
+        <Text> Elevation 3</Text>
+      </MaterialCardContent>
+   </MaterialCard>
+```    
+   
+```typescript jsx
+    //minimal usage
+    <MaterialCardContent>
+       <Text>this is a material card</Text>
+       <Text>this is a material card</Text>
+       <Text>this is a material card</Text>
+    </MaterialCardContent>
+```    
+    
+```typescript jsx
+     //with background image
+     <MaterialCard  style={{flex:1,height:200}} backgroundImageSource={{uri:'https://lorempixel.com/300/200/sports'}}>
+         <MaterialCardContent >
+             <Text style={{textShadowColor:'black',textShadowRadius:2,color:'white'}}> material card</Text>
+             <Text style={{textShadowColor:'black',textShadowRadius:2,color:'white'}}> Elevation 7</Text>
+         </MaterialCardContent>
+     </MaterialCard>
+```    
+#### Props
+```typescript jsx
+  elevation?: number,
+  margin?:number,
+  header?(): React.ReactNode,
+  style?:ViewStyle,
+  backgroundImageSource?: ImageSourcePropType,
+  backgroundColor?:string
+
+```  
+#### Default Props
+```typescript jsx
+    elevation:2,
+    margin:8,
+    backgroundColor:'#eeeeee'
+```          
+### Material Toolbar
+
+ <p align="center">
+ <img src="https://raw.githubusercontent.com/lvlrSajjad/ignite-boilerplate-andross-typescript/master/gifs/material-toolbar.png" width="30%">
+ </p>
+ 
+ A toolbar designed based on material.io guidelines
+ And
+ MaterialToolbarContent you can use it for some content on your toolbar , you can also use your custom component
+ #### Usage
+ 
+ Import :
+ 
+ ```typescript jsx
+import {MaterialToolbar, MaterialToolbarContent} from 'react-native-typescript-material-ui-collection';
+```
+
+Use:
+
+```typescript jsx
+ <MaterialToolbar
+    leftIcon='menu'
+    content={()=><MaterialToolbarContent haveTypeMode={true} text='title'/>}
+ />
+```
+
+```typescript jsx
+<MaterialToolbar
+  leftIcon='menu'
+  iconsColor='white'
+  color='purple'
+  content={()=><MaterialToolbarContent color='white' haveTypeMode={true} text='title'/>}
+/>
+```
+ 
+```typescript jsx
+ // Minimal
+<MaterialToolbar
+   leftIcon='menu'
+/>
+```
+
+```typescript jsx
+<MaterialToolbar
+  leftIcon='menu'
+  content={()=><MaterialToolbarContent haveTypeMode={false} text='title'/>}
+/>
+``` 
+#### Props
+
+```typescript jsx
+MaterialToolbarProps {
+  color?: string,
+  onLeftIconPress?():void,
+  onRightIconPress?():void,
+  content?():ReactNode
+  iconsColor?:string,
+  leftIcon?:string, // one of https://materialdesignicons.com/ icons
+  rightIcon?:string // one of https://materialdesignicons.com/ icons
+}
+MaterialToolbarContentProps {
+  color?: string,
+  font?: string,
+  text?: string,
+  haveTypeMode?: boolean,
+  typeModeIcon?:string, // one of https://materialdesignicons.com/ icons
+  onChangeText?(text:string),
+  onTypeModePress?(): void,
+}
+```
+
+#### Default Props
+
+```typescript jsx
+//Material Toolbar Content
+
+    color: '#212121',
+    typeModeIcon:'magnify', 
+    onTypeModePress: () => {
+    },
+    onChangeText:()=>{}
+  
+
+//Material Toolbar
+
+    color: '#eeeeee',
+    onLeftIconPress:()=>{},
+    onRightIconPress:()=>{},
+    iconsColor:'#212121'
+  
+```
+ 
+### Material Container 
    
  <p align="center">
  <img src="https://raw.githubusercontent.com/lvlrSajjad/ignite-boilerplate-andross-typescript/master/gifs/container.png" width="30%">
@@ -612,4 +778,100 @@ export default class LaunchScreen extends Component {
   rtl?: boolean,
   progress?: boolean
 
+```
+
+### Material Switch
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/lvlrSajjad/ignite-boilerplate-andross-typescript/master/gifs/switch.gif" width="30%">
+</p>
+
+I Made this switch component exactly based on material.io design guidelines
+
+#### Usage
+
+this is exactly the code of above gif
+
+```typescript jsx
+import * as React from 'react'
+import { View } from 'react-native'
+import MaterialSwitch from "react-native-typescript-material-ui-collection";
+
+// Styles
+import styles from './Styles/LaunchScreenStyles'
+
+interface LaunchScreenComponentProps {}
+
+export default class LaunchScreen extends React.Component <LaunchScreenComponentProps> {
+
+  render () {
+    return (
+      <View style={styles.mainContainer}>
+        <MaterialSwitch color='purple'/>
+        <MaterialSwitch text="Material switch" color='purple'/>
+        <MaterialSwitch text="Material switch" color='purple'/>
+        <MaterialSwitch text="Material switch" color='purple'/>
+
+      </View>
+    )
+  }
+}
+
+```
+
+#### Props:
+
+```typescript jsx
+  textFont?:string,
+  textColor?:string,
+  text?:string,
+  color?:string
+  onValueChanged?(value:boolean):void
+
+```
+
+### Material Radio Group
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/lvlrSajjad/ignite-boilerplate-andross-typescript/master/gifs/material-radio-group.gif" width="30%">
+</p>
+
+I Made this radio group component exactly based on material.io design guidelines
+
+#### Usage
+
+this is exactly the code of above gif
+
+```typescript jsx
+import * as React from 'react'
+import { View } from 'react-native'
+import MaterialSwitch from "react-native-typescript-material-ui-collection";
+
+// Styles
+import styles from './Styles/LaunchScreenStyles'
+
+interface LaunchScreenComponentProps {}
+
+export default class LaunchScreen extends React.Component <LaunchScreenComponentProps> {
+  render () {
+    return (
+      <View style={styles.mainContainer}>
+        <MaterialRadioGroup data={[{text:'text1'},{text:'text2'},{text:'text3'},{text:'text4'}]} color='purple'/>
+        <MaterialRadioGroup isRtl={true} data={[{text:'text1'},{text:'text2'},{text:'text3'},{text:'text4'}]} color='purple'/>
+      </View>
+    )
+  }
+}
+
+```
+
+#### Props:
+
+```typescript jsx
+  data: any, // just be sure you have text:string field in datarows
+  color: string,
+  textFont?: string,
+  textColor?: string,
+  isRtl?:boolean,
+  onItemPress?(item, index): void
 ```
