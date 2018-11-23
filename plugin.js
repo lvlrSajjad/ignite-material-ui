@@ -13,7 +13,7 @@ const add = async function (context) {
   await ignite.addModule('@types/react-native', { dev: true })
   await ignite.addModule('react-native-material-textfield', { version: '0.12.0', link: true })
   await ignite.addModule('react-native-vector-icons', { version: '4.4.2', link: true })
-  await ignite.addModule('react-native-typescript-material-ui-collection', { version: '0.0.30', link: true })
+  await ignite.addModule('react-native-typescript-material-ui-collection', { version: '0.0.35', link: true })
   await ignite.addModule('react-native-material-ripple', { version: '0.8.0', link: true })
   const copyJobs = [{
     template: 'jsconfig.json',

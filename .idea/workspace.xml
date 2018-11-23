@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2522b9b-d1b6-4b74-a8ba-bad8ff114232" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/rn-cli.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/typings.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.js" afterDir="false" />
-    </list>
+    <list default="true" id="d2522b9b-d1b6-4b74-a8ba-bad8ff114232" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -102,10 +92,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="676" />
     <option name="width" value="697" />
-    <option name="height" value="728" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
