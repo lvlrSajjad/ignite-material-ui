@@ -1,7 +1,7 @@
 {
   "name": "ignite-material-ui",
   "description": "Ignite plugin that adds some material ui collection for use in project.",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "MIT",
   "files": [
     "commands",
